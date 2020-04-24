@@ -1,5 +1,12 @@
 language: java
 jdk: 
     -openjdk8
+addons:
+    sonarcloud:
+        organization: 
+            rglenz
+        token: 
+            cb13a9914f6807bd4800fbcb12e27d50c73e50dd
 script:
-  ant build
+    -ant build
+    -sonar-scanner
