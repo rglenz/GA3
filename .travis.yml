@@ -1,12 +1,11 @@
 language: java
-jdk: 
-    -openjdk8
+jdk:
+- openjdk8
+
 addons:
-    sonarcloud:
-        organization: 
-            rglenz
-        token: 
-            travis encrypt 50a9ffda5dbe05a1db12c112e6a51b8d98a29be6
+  sonarcloud:
+    organization: "rglenz"
+    token: "ac623ed6a12788d2ab7f16278a265f872de5c92f"
 script:
-    - ant build
-    - sonar-scanner
+- ant build
+- sonar-scanner
